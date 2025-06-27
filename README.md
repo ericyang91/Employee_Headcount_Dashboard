@@ -46,6 +46,32 @@ To improve this, I developed an interactive Power BI dashboard that:
 
 ---
 
+## 🧮 Data Structuring for Power BI
+
+To make the data model usable and efficient in Power BI, I designed the dataset in a **flat, tabular structure** ideal for analysis and filtering. Key design decisions include:
+
+- **No merged cells or nested structures** — each row represents a unique data point (granular to vendor, room, LOB, month, and employee type).
+- Created a **`YearMonth`** column for simplified time-based filtering and a separate **`Date`** column to support Power BI's time intelligence functions.
+- Included **dimension fields**:
+  - `Vendor`
+  - `City`
+  - `Room`
+  - `EmployeeType`
+  - `LineOfBusiness`
+- Numeric field `Headcount` is clean and ready for aggregation (sum, average, MoM comparisons).
+- Ensured **consistency in categorical naming** (e.g., “Retail Banking”, “IT Support”) to prevent data mismatches or filtering issues.
+
+This structure supports:
+- Accurate DAX calculations
+- Clean filtering without the need for excessive data transformation
+- Easy creation of slicers and visuals based on multiple attributes
+
+![Excel Sheet](https://github.com/ericyang91/Employee_Headcount_Dashboard/blob/main/screenshots/s2.JPG)
+
+> 📌 The data shown in this project is anonymized and generated solely for demonstration purposes.
+
+---
+
 ## 🔗 Other
 
 > 🚨 *Data is anonymized and synthetic for demonstration purposes*
@@ -72,6 +98,7 @@ To improve this, I developed an interactive Power BI dashboard that:
 
 **Ji Yeol Yang**  
 Aspiring Data Analyst with a passion for clean data visualization and storytelling through analytics
+
 🔗 [GitHub Profile](https://github.com/ericyang91)  
 📧 [Email me](mailto:ericjyyang@gmail.com)
 
